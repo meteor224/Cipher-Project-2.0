@@ -3,3 +3,5 @@
 ## Instructions
 
 Open index.html to run.
+
+Exercise completed using JavaScript.
