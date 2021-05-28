@@ -4,7 +4,7 @@ function cipher(type) {
   // Convert string input to uppercase
   let string = document.getElementById('textInput').value.toUpperCase();
   let stringLetters = string.split('');
-  let outPutString = '';
+  let outputString = '';
   let incrementer = 0;
 
   if (string) {
@@ -18,7 +18,7 @@ function cipher(type) {
           // To deal with X, Y and Z while encoding we decrement by 23 so X, Y, and Z can be encoded to A, B and C
           incrementer = ((n === 'X') || (n === 'Y') || (n === 'Z')) ? -23 : 3;
         } else if (type == 'decode') {
-          // To deal with X, Y and Z while decoding we increment by 23 so A, B and C can be decoded to X, Y and Z
+          // To deal with X, Y and Z while decoding we increment by 23 so A, B, and C can be decoded to X, Y and Z
           incrementer = ((n === 'A') || (n === 'B') || (n === 'C')) ? +23 : -3;
         } else {
           // If type is not specified or is incorrect then return an error
@@ -27,19 +27,19 @@ function cipher(type) {
         }
         
         // Here we create an output string from the letters array
-        outPutString += letters[letters.indexOf(stringLetters[x]) + incrementer];
+        outputString += letters[letters.indexOf(stringLetters[x]) + incrementer];
       } 
     } else {
       // If the string input is not alphabetical return an error
-      outPutString = 'Error: Please enter letters only.';
+      outputString = 'Error: Please enter letters only.';
     }
   } else {
     // If there is no string input return an error
-    outPutString = 'Error: Please enter some text.';
+    outputString = 'Error: Please enter some text.';
   }
   
   // Print the output on screen
-  document.getElementById('textOutput').textContent = outPutString;
+  document.getElementById('textOutput').textContent = outputString;
 }
 
 function validate(string) {
