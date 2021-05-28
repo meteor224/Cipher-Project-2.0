@@ -1,4 +1,4 @@
-# Cipher-Project-2.0
+# Cipher Project 2.0
 
 ## Instructions
 
